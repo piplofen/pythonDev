@@ -6,7 +6,7 @@ import logging as log
 # headersForQue = os.environ.get("HEADERSFORQUEUE")
 
 
-# открываю файлик
+# open file
 def openFile(path: str, type: str = None):
     try:
         with open(f"{path}.{type}", encoding="utf-8") as file:  # !!!!!!!!!!!!!!!!! encoding="utf-8" !!!!!!!!!!!!!!!!!
@@ -23,7 +23,7 @@ def openFile(path: str, type: str = None):
         return False
 
 
-# записываю в файлик
+# write file
 def writeFile(path: str, type: str, param: str, data: object, print1=0):
     try:
         with open(f"{path}.{type}", param) as file:
@@ -37,6 +37,7 @@ def writeFile(path: str, type: str, param: str, data: object, print1=0):
         print("Файл не найден")
 
 
+# init logger
 def logStart(filePath: str):
     return log.basicConfig(level="INFO", encoding="utf-8", filename=filePath,
                            filemode="a",
