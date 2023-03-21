@@ -40,6 +40,6 @@ def writeFile(path: str, type: str, param: str, data: object, print1=0):
 def logStart(filePath):
     return log.basicConfig(level="INFO", encoding="utf-8", filename=filePath,
                            filemode="a",
-                           format="[%(asctime)s] - [%(levelname)s] - [%(pathname)s.%(filename)s.%(funcName)s(%("
+                           format="[%(asctime)s] - [%(levelname)s] - [%(filename)s.%(funcName)s(%("
                                   "lineno)d)] > [%(message)s]")
 
