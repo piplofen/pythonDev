@@ -20,7 +20,7 @@ class Database(metaclass=MetaSingleton):
     def __init__(self):
         if self.connection is None:
             try:
-                self.conn = sqlite3.connect("database.db")
+                self.conn = sqlite3.connect("database/database.db")
                 self.cur = self.conn.cursor()
                 log.info("Initialization local database")
             except sqlite3.Error as e:
