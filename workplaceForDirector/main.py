@@ -5,11 +5,12 @@ import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtGui import QIcon
 from design import logInDesign
+from design import regDesign
 
 u.logStart("log/log.log")
 
 
-class MainWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
+class LogInWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -17,10 +18,18 @@ class MainWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
         self.bttnExit.clicked.connect(self.close)
 
 
+class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setWindowIcon(QIcon("icons/users.ico"))
+
+
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
+    logWindow = LogInWindow()
+    regWindow = RegWindow()
+    logWindow.show()
     app.exec()
 
 

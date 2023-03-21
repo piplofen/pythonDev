@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'logIn.ui'
+# Form implementation generated from reading ui file 'reg.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -9,26 +9,21 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_LogInWindow(object):
-    def setupUi(self, LogInWindow):
-        LogInWindow.setObjectName("LogInWindow")
-        LogInWindow.resize(260, 193)
-        LogInWindow.setMinimumSize(QtCore.QSize(260, 193))
-        LogInWindow.setMaximumSize(QtCore.QSize(260, 193))
-        font = QtGui.QFont()
-        font.setKerning(False)
-        LogInWindow.setFont(font)
-        LogInWindow.setStyleSheet("#LogInWindow{\n"
+class Ui_RegWindow(object):
+    def setupUi(self, RegWindow):
+        RegWindow.setObjectName("RegWindow")
+        RegWindow.resize(260, 193)
+        RegWindow.setMinimumSize(QtCore.QSize(260, 193))
+        RegWindow.setMaximumSize(QtCore.QSize(260, 193))
+        RegWindow.setStyleSheet("#RegWindow{\n"
 "background-color:#6899D3\n"
-"}\n"
-"\n"
-"")
-        self.centralwidget = QtWidgets.QWidget(parent=LogInWindow)
+"}")
+        self.centralwidget = QtWidgets.QWidget(parent=RegWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
         self.frame.setStyleSheet("QFrame{\n"
 "background: #FFA573;\n"
@@ -58,8 +53,8 @@ class Ui_LogInWindow(object):
         self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.frame)
-        self.verticalLayout.setObjectName("verticalLayout")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_3 = QtWidgets.QLabel(parent=self.frame)
@@ -86,14 +81,6 @@ class Ui_LogInWindow(object):
         self.LineEditLogin.setFont(font)
         self.LineEditLogin.setObjectName("LineEditLogin")
         self.gridLayout.addWidget(self.LineEditLogin, 0, 1, 1, 1)
-        self.label_2 = QtWidgets.QLabel(parent=self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Droid Serif")
-        font.setPointSize(14)
-        font.setItalic(False)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
         self.label = QtWidgets.QLabel(parent=self.frame)
         self.label.setMaximumSize(QtCore.QSize(111, 16777215))
         font = QtGui.QFont()
@@ -103,6 +90,14 @@ class Ui_LogInWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.label_2 = QtWidgets.QLabel(parent=self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Droid Serif")
+        font.setPointSize(14)
+        font.setItalic(False)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
         self.LineEditPassword = QtWidgets.QLineEdit(parent=self.frame)
         self.LineEditPassword.setMinimumSize(QtCore.QSize(0, 35))
         self.LineEditPassword.setMaximumSize(QtCore.QSize(16777215, 35))
@@ -113,46 +108,31 @@ class Ui_LogInWindow(object):
         self.LineEditPassword.setFont(font)
         self.LineEditPassword.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.LineEditPassword.setObjectName("LineEditPassword")
-        self.gridLayout.addWidget(self.LineEditPassword, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.LineEditPassword, 1, 1, 1, 1)
         self.verticalLayout_3.addLayout(self.gridLayout)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.bttnExit = QtWidgets.QPushButton(parent=self.frame)
+        self.bttnReg = QtWidgets.QPushButton(parent=self.frame)
         font = QtGui.QFont()
         font.setFamily("Droid Serif")
         font.setPointSize(14)
         font.setItalic(False)
-        self.bttnExit.setFont(font)
+        self.bttnReg.setFont(font)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../../study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bttnExit.setIcon(icon)
-        self.bttnExit.setObjectName("bttnExit")
-        self.horizontalLayout_2.addWidget(self.bttnExit)
-        self.bttnLog = QtWidgets.QPushButton(parent=self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Droid Serif")
-        font.setPointSize(14)
-        font.setItalic(False)
-        self.bttnLog.setFont(font)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../../../study/Диплом/icons/enter_icon-icons.com_48306.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bttnLog.setIcon(icon1)
-        self.bttnLog.setObjectName("bttnLog")
-        self.horizontalLayout_2.addWidget(self.bttnLog)
-        self.verticalLayout_3.addLayout(self.horizontalLayout_2)
-        self.verticalLayout.addLayout(self.verticalLayout_3)
-        self.horizontalLayout.addWidget(self.frame)
-        self.verticalLayout_2.addLayout(self.horizontalLayout)
-        LogInWindow.setCentralWidget(self.centralwidget)
+        self.bttnReg.setIcon(icon)
+        self.bttnReg.setObjectName("bttnReg")
+        self.verticalLayout_3.addWidget(self.bttnReg)
+        self.verticalLayout_4.addLayout(self.verticalLayout_3)
+        self.verticalLayout.addWidget(self.frame)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+        RegWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(LogInWindow)
-        QtCore.QMetaObject.connectSlotsByName(LogInWindow)
+        self.retranslateUi(RegWindow)
+        QtCore.QMetaObject.connectSlotsByName(RegWindow)
 
-    def retranslateUi(self, LogInWindow):
+    def retranslateUi(self, RegWindow):
         _translate = QtCore.QCoreApplication.translate
-        LogInWindow.setWindowTitle(_translate("LogInWindow", "Аутентификация"))
-        self.label_3.setText(_translate("LogInWindow", "Войдите в систему"))
-        self.label_2.setText(_translate("LogInWindow", "Пароль"))
-        self.label.setText(_translate("LogInWindow", "Логин"))
-        self.bttnExit.setText(_translate("LogInWindow", "Выйти"))
-        self.bttnLog.setText(_translate("LogInWindow", "Войти"))
+        RegWindow.setWindowTitle(_translate("RegWindow", "Регистрация"))
+        self.label_3.setText(_translate("RegWindow", "Регистрация в АРМ"))
+        self.label.setText(_translate("RegWindow", "Логин"))
+        self.label_2.setText(_translate("RegWindow", "Пароль"))
+        self.bttnReg.setText(_translate("RegWindow", "Зарегистрироваться"))
