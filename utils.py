@@ -1,7 +1,7 @@
 import csv
 import json
 import logging as log
-import os
+# import os
 
 # headersForQue = os.environ.get("HEADERSFORQUEUE")
 
@@ -37,7 +37,7 @@ def writeFile(path: str, type: str, param: str, data: object, print1=0):
         print("Файл не найден")
 
 
-def logStart(filePath):
+def logStart(filePath: str):
     return log.basicConfig(level="INFO", encoding="utf-8", filename=filePath,
                            filemode="a",
                            format="[%(asctime)s] - [%(levelname)s] - [%(filename)s.%(funcName)s(%("
