@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LogUpWindow</class>
- <widget class="QMainWindow" name="LogUpWindow">
+ <class>LogInWindow</class>
+ <widget class="QMainWindow" name="LogInWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -30,21 +30,19 @@
   <property name="windowTitle">
    <string>Аутентификация</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>study/Диплом/icons/user_users_arrow_right_profile_avatar_account_person_icon_218737.ico</normaloff>study/Диплом/icons/user_users_arrow_right_profile_avatar_account_person_icon_218737.ico</iconset>
-  </property>
   <property name="styleSheet">
-   <string notr="true">#LogUpWindow{
+   <string notr="true">#LogInWindow{
 background-color:#6899D3
-}</string>
+}
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QFrame" name="FrameLogUp">
+       <widget class="QFrame" name="FrameLogIn">
         <property name="minimumSize">
          <size>
           <width>240</width>
@@ -58,9 +56,30 @@ background-color:#6899D3
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">#FrameLogUp{
+         <string notr="true">QFrame{
 background: #FFA573;
 border: 2px solid black;
+}
+
+QPushButton{
+background-color: rgba(85, 170, 127, 155);
+}
+
+QPushButton:hover{
+background-color: rgba(85, 170, 127, 135);
+}
+
+QPushButton:pressed{
+background-color: rgba(85, 170, 127, 205);
+}
+
+QLabel{
+border: 1px solid transparent;
+}
+
+QLineEdit{
+border: 1px solid black;
+border-radius: 3px;
 }</string>
         </property>
         <property name="frameShape">
@@ -183,7 +202,7 @@ border: 2px solid black;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico</normaloff>study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico</iconset>
+                 <normaloff>../../../study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico</normaloff>../../../study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico</iconset>
                </property>
               </widget>
              </item>
@@ -201,7 +220,7 @@ border: 2px solid black;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>study/Диплом/icons/enter_icon-icons.com_48306.ico</normaloff>study/Диплом/icons/enter_icon-icons.com_48306.ico</iconset>
+                 <normaloff>../../../study/Диплом/icons/enter_icon-icons.com_48306.ico</normaloff>../../../study/Диплом/icons/enter_icon-icons.com_48306.ico</iconset>
                </property>
               </widget>
              </item>

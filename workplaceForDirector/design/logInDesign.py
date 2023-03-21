@@ -9,42 +9,62 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_LogUpWindow(object):
-    def setupUi(self, LogUpWindow):
-        LogUpWindow.setObjectName("LogUpWindow")
-        LogUpWindow.resize(260, 180)
-        LogUpWindow.setMinimumSize(QtCore.QSize(260, 180))
-        LogUpWindow.setMaximumSize(QtCore.QSize(260, 180))
+class Ui_LogInWindow(object):
+    def setupUi(self, LogInWindow):
+        LogInWindow.setObjectName("LogInWindow")
+        LogInWindow.resize(260, 180)
+        LogInWindow.setMinimumSize(QtCore.QSize(260, 180))
+        LogInWindow.setMaximumSize(QtCore.QSize(260, 180))
         font = QtGui.QFont()
         font.setKerning(False)
-        LogUpWindow.setFont(font)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("study/Диплом/icons/user_users_arrow_right_profile_avatar_account_person_icon_218737.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        LogUpWindow.setWindowIcon(icon)
-        LogUpWindow.setStyleSheet("#LogUpWindow{\n"
+        LogInWindow.setFont(font)
+        LogInWindow.setStyleSheet("#LogInWindow{\n"
 "background-color:#6899D3\n"
-"}")
-        self.centralwidget = QtWidgets.QWidget(parent=LogUpWindow)
+"}\n"
+"\n"
+"")
+        self.centralwidget = QtWidgets.QWidget(parent=LogInWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.FrameLogUp = QtWidgets.QFrame(parent=self.centralwidget)
-        self.FrameLogUp.setMinimumSize(QtCore.QSize(240, 160))
-        self.FrameLogUp.setMaximumSize(QtCore.QSize(240, 160))
-        self.FrameLogUp.setStyleSheet("#FrameLogUp{\n"
+        self.FrameLogIn = QtWidgets.QFrame(parent=self.centralwidget)
+        self.FrameLogIn.setMinimumSize(QtCore.QSize(240, 160))
+        self.FrameLogIn.setMaximumSize(QtCore.QSize(240, 160))
+        self.FrameLogIn.setStyleSheet("QFrame{\n"
 "background: #FFA573;\n"
 "border: 2px solid black;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"background-color: rgba(85, 170, 127, 155);\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgba(85, 170, 127, 135);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgba(85, 170, 127, 205);\n"
+"}\n"
+"\n"
+"QLabel{\n"
+"border: 1px solid transparent;\n"
+"}\n"
+"\n"
+"QLineEdit{\n"
+"border: 1px solid black;\n"
+"border-radius: 3px;\n"
 "}")
-        self.FrameLogUp.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.FrameLogUp.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.FrameLogUp.setObjectName("FrameLogUp")
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.FrameLogUp)
+        self.FrameLogIn.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.FrameLogIn.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.FrameLogIn.setObjectName("FrameLogIn")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.FrameLogIn)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.label_3 = QtWidgets.QLabel(parent=self.FrameLogUp)
+        self.label_3 = QtWidgets.QLabel(parent=self.FrameLogIn)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(20)
@@ -56,7 +76,7 @@ class Ui_LogUpWindow(object):
         self.verticalLayout_3.addWidget(self.label_3)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        self.LineEditLogin = QtWidgets.QLineEdit(parent=self.FrameLogUp)
+        self.LineEditLogin = QtWidgets.QLineEdit(parent=self.FrameLogIn)
         self.LineEditLogin.setMaximumSize(QtCore.QSize(100100, 27))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -65,7 +85,7 @@ class Ui_LogUpWindow(object):
         self.LineEditLogin.setFont(font)
         self.LineEditLogin.setObjectName("LineEditLogin")
         self.gridLayout.addWidget(self.LineEditLogin, 0, 1, 1, 1)
-        self.label_2 = QtWidgets.QLabel(parent=self.FrameLogUp)
+        self.label_2 = QtWidgets.QLabel(parent=self.FrameLogIn)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
@@ -73,7 +93,7 @@ class Ui_LogUpWindow(object):
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
-        self.label = QtWidgets.QLabel(parent=self.FrameLogUp)
+        self.label = QtWidgets.QLabel(parent=self.FrameLogIn)
         self.label.setMaximumSize(QtCore.QSize(111, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -82,7 +102,7 @@ class Ui_LogUpWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.LineEditPassword = QtWidgets.QLineEdit(parent=self.FrameLogUp)
+        self.LineEditPassword = QtWidgets.QLineEdit(parent=self.FrameLogIn)
         self.LineEditPassword.setMaximumSize(QtCore.QSize(16777215, 27))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -95,42 +115,42 @@ class Ui_LogUpWindow(object):
         self.verticalLayout_3.addLayout(self.gridLayout)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.bttnExit = QtWidgets.QPushButton(parent=self.FrameLogUp)
+        self.bttnExit = QtWidgets.QPushButton(parent=self.FrameLogIn)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
         font.setItalic(False)
         self.bttnExit.setFont(font)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bttnExit.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../../../study/Диплом/icons/4115235-exit-logout-sign-out_114030.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bttnExit.setIcon(icon)
         self.bttnExit.setObjectName("bttnExit")
         self.horizontalLayout.addWidget(self.bttnExit)
-        self.bttnLog = QtWidgets.QPushButton(parent=self.FrameLogUp)
+        self.bttnLog = QtWidgets.QPushButton(parent=self.FrameLogIn)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
         font.setItalic(False)
         self.bttnLog.setFont(font)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("study/Диплом/icons/enter_icon-icons.com_48306.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bttnLog.setIcon(icon2)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("../../../study/Диплом/icons/enter_icon-icons.com_48306.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bttnLog.setIcon(icon1)
         self.bttnLog.setObjectName("bttnLog")
         self.horizontalLayout.addWidget(self.bttnLog)
         self.verticalLayout_3.addLayout(self.horizontalLayout)
         self.verticalLayout_4.addLayout(self.verticalLayout_3)
-        self.verticalLayout.addWidget(self.FrameLogUp)
+        self.verticalLayout.addWidget(self.FrameLogIn)
         self.verticalLayout_2.addLayout(self.verticalLayout)
-        LogUpWindow.setCentralWidget(self.centralwidget)
+        LogInWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(LogUpWindow)
-        QtCore.QMetaObject.connectSlotsByName(LogUpWindow)
+        self.retranslateUi(LogInWindow)
+        QtCore.QMetaObject.connectSlotsByName(LogInWindow)
 
-    def retranslateUi(self, LogUpWindow):
+    def retranslateUi(self, LogInWindow):
         _translate = QtCore.QCoreApplication.translate
-        LogUpWindow.setWindowTitle(_translate("LogUpWindow", "Аутентификация"))
-        self.label_3.setText(_translate("LogUpWindow", "Войдите в систему"))
-        self.label_2.setText(_translate("LogUpWindow", "Пароль"))
-        self.label.setText(_translate("LogUpWindow", "Логин"))
-        self.bttnExit.setText(_translate("LogUpWindow", "Выйти"))
-        self.bttnLog.setText(_translate("LogUpWindow", "Войти"))
+        LogInWindow.setWindowTitle(_translate("LogInWindow", "Аутентификация"))
+        self.label_3.setText(_translate("LogInWindow", "Войдите в систему"))
+        self.label_2.setText(_translate("LogInWindow", "Пароль"))
+        self.label.setText(_translate("LogInWindow", "Логин"))
+        self.bttnExit.setText(_translate("LogInWindow", "Выйти"))
+        self.bttnLog.setText(_translate("LogInWindow", "Войти"))

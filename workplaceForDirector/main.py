@@ -3,15 +3,17 @@ import logging as log
 import sys
 
 from PyQt6 import QtWidgets
+from PyQt6.QtGui import QIcon
 from design import logInDesign
 
 u.logStart("log/log.log")
 
 
-class MainWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogUpWindow):
+class MainWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowIcon(QIcon("icons/log-in.svg"))
 
 
 def main():
