@@ -13,7 +13,8 @@ class MainWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.setWindowIcon(QIcon("icons/log-in.svg"))
+        self.setWindowIcon(QIcon("icons/log-in.ico"))
+        self.bttnExit.clicked.connect(self.close)
 
 
 def main():
