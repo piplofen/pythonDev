@@ -50,6 +50,7 @@ class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
 
 
 def checkUser():
+    """This func probably must be in database class."""
     global db
     db = database.Database()
     try:
