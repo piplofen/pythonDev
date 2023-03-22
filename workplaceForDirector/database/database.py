@@ -22,9 +22,14 @@ class Database(metaclass=MetaSingleton):
             try:
                 self.conn = sqlite3.connect("database/database.db")
                 self.cur = self.conn.cursor()
-                log.info("Initialization local database")
+                log.info("Successful initialization local database")
+                self.createTableUser()
             except sqlite3.Error as e:
                 log.error(e)
+
+    def createTableUser(self):
+        self.cur.execute("create table if not exists user(id integer primary key, login varchar, password varchar);")
+        self.conn.commit()
 
 
 if __name__ == '__main__':

@@ -35,6 +35,7 @@ class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
                            f"values('{self.LineEditLogin.text()}','{self.LineEditPassword.text()}')")
             db.conn.commit()
             self.messageBox(self.LineEditLogin.text())
+            self.close()
             log.info("Successful registration")
         except sqlite3.Error as e:
             print(e)
