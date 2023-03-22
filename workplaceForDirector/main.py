@@ -29,7 +29,7 @@ class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
         self.bttnReg.clicked.connect(self.reg)
 
     def reg(self):
-        """This func probably must be in database class."""
+        """Replace this func for insertData in database class."""
         try:
             db.cur.execute(f"insert into user(login, password) "
                            f"values('{self.LineEditLogin.text()}','{self.LineEditPassword.text()}')")
@@ -51,7 +51,7 @@ class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
 
 
 def checkUser():
-    """This func probably must be in database class."""
+    """Replace this func for somthing in database class."""
     global db
     db = database.Database()
     try:

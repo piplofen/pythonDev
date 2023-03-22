@@ -31,6 +31,12 @@ class Database(metaclass=MetaSingleton):
         self.cur.execute("create table if not exists user(id integer primary key, login varchar, password varchar);")
         self.conn.commit()
 
+    def insertData(self, table, key, value):
+        pass
+
+    def updateData(self, table, key, value):
+        pass
+
 
 if __name__ == '__main__':
     d = Database()
