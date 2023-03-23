@@ -9,9 +9,30 @@ from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QMessageBox
 from design import logInDesign
 from design import regDesign
+from design import mainDesign
 from database import database
 
 u.logStart("../../log/log.log")
+
+
+class MainWindow(QtWidgets.QMainWindow, mainDesign.Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setWindowIcon(QIcon("icons/main.ico"))
+        self.bttnCustomers.setIcon(QIcon("icons/customers.ico"))
+        self.bttnStorage.setIcon(QIcon("icons/storage.ico"))
+        self.bttnStatic.setIcon(QIcon("icons/statistic.ico"))
+        self.bttnJil.setIcon(QIcon("icons/jil.ico"))
+        self.bttnObj.setIcon(QIcon("icons/obj.ico"))
+        self.bttnSyroi.setIcon(QIcon("icons/syroi.ico"))
+        self.bttnDebtors.setIcon(QIcon("icons/debtors.ico"))
+        self.bttnRequests.setIcon(QIcon("icons/requests.ico"))
+        self.bttnClient.setIcon(QIcon("icons/client.ico"))
+        self.bttnSearch.setIcon(QIcon("icons/search.ico"))
+        self.bttnDel.setIcon(QIcon("icons/del.ico"))
+        self.bttnAdd.setIcon(QIcon("icons/add.ico"))
+        self.bttnChange.setIcon(QIcon("icons/change.ico"))
 
 
 class LogInWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
@@ -24,7 +45,7 @@ class LogInWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
 
     def openMainWindow(self):
         self.close()
-
+        mainWindow.show()
 
 
 class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
@@ -73,7 +94,9 @@ def checkUser():
 
 
 def main():
+    global mainWindow
     app = QtWidgets.QApplication(sys.argv)
+    mainWindow = MainWindow()
     if checkUser():
         logWindow = LogInWindow()
         logWindow.show()
