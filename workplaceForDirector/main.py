@@ -13,12 +13,18 @@ from database import database
 
 u.logStart("../../log/log.log")
 
+
 class LogInWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.setWindowIcon(QIcon("icons/log-in.ico"))
         self.bttnExit.clicked.connect(self.close)
+        self.bttnLog.clicked.connect(self.openMainWindow)
+
+    def openMainWindow(self):
+        self.close()
+
 
 
 class RegWindow(QtWidgets.QMainWindow, regDesign.Ui_RegWindow):
