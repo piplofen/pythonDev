@@ -52,13 +52,13 @@ background-color: transparent;
 }
 
 QPushButton:hover{
-background-color: rgba(85, 170, 127, 135);
+background-color: transparent;
 border-radius: 10px;
 margin-left: 5px;
 }
 
 QPushButton:pressed{
-background-color: rgba(85, 170, 127, 205);
+background-color: rgba(85, 170, 127, 105);
 }</string>
         </property>
         <property name="frameShape">
@@ -271,9 +271,151 @@ background-color: rgba(85, 170, 127, 205);
 background-color: rgb(85, 170, 255);
 border: 2px solid black;
 border-radius: 10px;
+}
+
+QTableWidget{
+background-color: rgba(255, 170, 255, 150);
+border: 2px solid black;
+border-radius: 10px;
+}
+
+QPushButton{
+background-color: transparent;
+border-radius: 10px;
+}
+
+QPushButton:hover{
+background-color: rgba(85, 170, 127, 155);
+border-radius: 10px;
+margin: 1px;
+}
+
+QPushButton:pressed{
+background-color: rgba(85, 170, 127, 205);
 }</string>
         </property>
-        <widget class="QWidget" name="page"/>
+        <widget class="QWidget" name="page">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <family>Droid Serif</family>
+                <pointsize>17</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Жильцы дома </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget"/>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="bttnLog">
+                <property name="font">
+                 <font>
+                  <family>Droid Serif</family>
+                  <pointsize>14</pointsize>
+                  <italic>false</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../icons/del.ico</normaloff>../icons/del.ico</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="bttnLog_2">
+                <property name="font">
+                 <font>
+                  <family>Droid Serif</family>
+                  <pointsize>14</pointsize>
+                  <italic>false</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../icons/change.ico</normaloff>../icons/change.ico</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="bttnLog_3">
+                <property name="font">
+                 <font>
+                  <family>Droid Serif</family>
+                  <pointsize>14</pointsize>
+                  <italic>false</italic>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../icons/add.ico</normaloff>../icons/add.ico</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
         <widget class="QWidget" name="page_2"/>
        </widget>
       </item>

@@ -39,13 +39,13 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(85, 170, 127, 135);\n"
+"background-color: transparent;\n"
 "border-radius: 10px;\n"
 "margin-left: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgba(85, 170, 127, 205);\n"
+"background-color: rgba(85, 170, 127, 105);\n"
 "}")
         self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -144,10 +144,97 @@ class Ui_MainWindow(object):
 "background-color: rgb(85, 170, 255);\n"
 "border: 2px solid black;\n"
 "border-radius: 10px;\n"
+"}\n"
+"\n"
+"QTableWidget{\n"
+"background-color: rgba(255, 170, 255, 150);\n"
+"border: 2px solid black;\n"
+"border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"background-color: transparent;\n"
+"border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgba(85, 170, 127, 155);\n"
+"border-radius: 10px;\n"
+"margin: 1px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgba(85, 170, 127, 205);\n"
 "}")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.page)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.label_3 = QtWidgets.QLabel(parent=self.page)
+        font = QtGui.QFont()
+        font.setFamily("Droid Serif")
+        font.setPointSize(17)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_3.setFont(font)
+        self.label_3.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
+        self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout_3.addWidget(self.label_3)
+        self.tableWidget = QtWidgets.QTableWidget(parent=self.page)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(0)
+        self.tableWidget.setRowCount(0)
+        self.verticalLayout_3.addWidget(self.tableWidget)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem1)
+        self.bttnLog = QtWidgets.QPushButton(parent=self.page)
+        font = QtGui.QFont()
+        font.setFamily("Droid Serif")
+        font.setPointSize(14)
+        font.setItalic(False)
+        self.bttnLog.setFont(font)
+        self.bttnLog.setText("")
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("../icons/del.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bttnLog.setIcon(icon10)
+        self.bttnLog.setIconSize(QtCore.QSize(24, 24))
+        self.bttnLog.setObjectName("bttnLog")
+        self.horizontalLayout_3.addWidget(self.bttnLog)
+        self.bttnLog_2 = QtWidgets.QPushButton(parent=self.page)
+        font = QtGui.QFont()
+        font.setFamily("Droid Serif")
+        font.setPointSize(14)
+        font.setItalic(False)
+        self.bttnLog_2.setFont(font)
+        self.bttnLog_2.setText("")
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap("../icons/change.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bttnLog_2.setIcon(icon11)
+        self.bttnLog_2.setIconSize(QtCore.QSize(24, 24))
+        self.bttnLog_2.setObjectName("bttnLog_2")
+        self.horizontalLayout_3.addWidget(self.bttnLog_2)
+        self.bttnLog_3 = QtWidgets.QPushButton(parent=self.page)
+        font = QtGui.QFont()
+        font.setFamily("Droid Serif")
+        font.setPointSize(14)
+        font.setItalic(False)
+        self.bttnLog_3.setFont(font)
+        self.bttnLog_3.setText("")
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap("../icons/add.ico"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bttnLog_3.setIcon(icon12)
+        self.bttnLog_3.setIconSize(QtCore.QSize(24, 24))
+        self.bttnLog_3.setObjectName("bttnLog_3")
+        self.horizontalLayout_3.addWidget(self.bttnLog_3)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_4.addLayout(self.verticalLayout_3)
         self.stackedWidget.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
@@ -169,3 +256,4 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label_3.setText(_translate("MainWindow", "Жильцы дома "))
