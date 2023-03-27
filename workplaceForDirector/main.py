@@ -1,5 +1,4 @@
 import sqlite3
-
 import utils as u
 import logging as log
 import sys
@@ -7,6 +6,8 @@ import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QMessageBox
+from PyQt6.QtCore import Qt
+
 from design import logInDesign
 from design import regDesign
 from design import mainDesign
@@ -19,6 +20,10 @@ class MainWindow(QtWidgets.QMainWindow, mainDesign.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+        self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+        self.setWindowFlag(Qt.WindowType.Tool, True)
+
         self.setWindowIcon(QIcon("icons/main.ico"))
         self.bttnCustomers.setIcon(QIcon("icons/customers.ico"))
         self.bttnStorage.setIcon(QIcon("icons/storage.ico"))
@@ -33,6 +38,13 @@ class MainWindow(QtWidgets.QMainWindow, mainDesign.Ui_MainWindow):
         self.bttnDel.setIcon(QIcon("icons/del.ico"))
         self.bttnAdd.setIcon(QIcon("icons/add.ico"))
         self.bttnChange.setIcon(QIcon("icons/change.ico"))
+        self.bttnClose.setIcon(QIcon("icons/closeWindow.ico"))
+        self.bttnExpand.setIcon(QIcon("icons/expandWindow.ico"))
+        self.bttnCollapse.setIcon(QIcon("icons/collapseWindow.ico"))
+
+        self.bttnClose.clicked.connect(sys.exit)
+        self.bttnCollapse.clicked.connect(self.hide)
+        self.bttnExpand.clicked.connect(self.show)
 
 
 class LogInWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):
