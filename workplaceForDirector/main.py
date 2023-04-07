@@ -45,6 +45,14 @@ class MainWindow(QtWidgets.QMainWindow, mainDesign.Ui_MainWindow):
         self.bttnClose.clicked.connect(sys.exit)
         self.bttnCollapse.clicked.connect(self.hide)
         self.bttnExpand.clicked.connect(self.show)
+        self.bttnCustomers.clicked.connect(self.showBook)
+        self.bttnStorage.clicked.connect(self.showOther)
+
+    def showBook(self):
+        self.stackedWidget.setCurrentIndex(0)
+
+    def showOther(self):
+        self.stackedWidget.setCurrentIndex(1)
 
 
 class LogInWindow(QtWidgets.QMainWindow, logInDesign.Ui_LogInWindow):

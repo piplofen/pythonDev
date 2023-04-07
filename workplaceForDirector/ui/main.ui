@@ -39,6 +39,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="bttnCollapse">
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent;</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -56,6 +59,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="bttnExpand">
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent;</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -73,6 +79,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="bttnClose">
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent;</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -351,7 +360,7 @@ border-radius: 10px;
 QTableWidget{
 background-color: rgba(255, 170, 255, 150);
 border: 2px solid black;
-border-radius: 10px;
+padding: 5px;
 }
 
 QPushButton{
@@ -368,6 +377,9 @@ margin: 1px;
 QPushButton:pressed{
 background-color: rgba(85, 170, 127, 205);
 }</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
           </property>
           <widget class="QWidget" name="page">
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -388,7 +400,7 @@ background-color: rgba(85, 170, 127, 205);
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="text">
-                 <string>Жильцы дома </string>
+                 <string>Книги</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -399,6 +411,7 @@ background-color: rgba(85, 170, 127, 205);
                <widget class="QTableWidget" name="tableWidget">
                 <property name="font">
                  <font>
+                  <family>Century Gothic</family>
                   <pointsize>14</pointsize>
                  </font>
                 </property>
@@ -406,7 +419,7 @@ background-color: rgba(85, 170, 127, 205);
                  <number>1</number>
                 </property>
                 <property name="sizeAdjustPolicy">
-                 <enum>QAbstractScrollArea::AdjustToContents</enum>
+                 <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
                 </property>
                 <property name="autoScroll">
                  <bool>true</bool>
@@ -418,7 +431,7 @@ background-color: rgba(85, 170, 127, 205);
                  <enum>QAbstractItemView::ScrollPerPixel</enum>
                 </property>
                 <attribute name="horizontalHeaderVisible">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </attribute>
                 <attribute name="horizontalHeaderCascadingSectionResizes">
                  <bool>false</bool>
@@ -426,8 +439,11 @@ background-color: rgba(85, 170, 127, 205);
                 <attribute name="horizontalHeaderHighlightSections">
                  <bool>true</bool>
                 </attribute>
+                <attribute name="horizontalHeaderMinimumSectionSize">
+                 <number>228</number>
+                </attribute>
                 <attribute name="verticalHeaderVisible">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </attribute>
                 <attribute name="verticalHeaderCascadingSectionResizes">
                  <bool>false</bool>
@@ -435,16 +451,499 @@ background-color: rgba(85, 170, 127, 205);
                 <attribute name="verticalHeaderHighlightSections">
                  <bool>true</bool>
                 </attribute>
+                <attribute name="verticalHeaderMinimumSectionSize">
+                 <number>50</number>
+                </attribute>
                 <row>
                  <property name="text">
-                  <string>New Row</string>
+                  <string>1</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
                  </property>
                 </row>
                 <row>
                  <property name="text">
-                  <string>New Row</string>
+                  <string>2</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
                  </property>
                 </row>
+                <row>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>9</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>title</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>description</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>author</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>date_published</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>is_published</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Century Gothic</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string>Мастер и Маргарита</string>
+                 </property>
+                </item>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string>Булгаков М.А. написал Мастер и Маргарита</string>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string>Булгаков М.А.</string>
+                 </property>
+                </item>
+                <item row="0" column="3">
+                 <property name="text">
+                  <string>1999 год</string>
+                 </property>
+                </item>
+                <item row="0" column="4">
+                 <property name="text">
+                  <string>12.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>Пикник на обочине</string>
+                 </property>
+                </item>
+                <item row="1" column="1">
+                 <property name="text">
+                  <string>Братья Стругацкие написали Пикник на обочине</string>
+                 </property>
+                </item>
+                <item row="1" column="2">
+                 <property name="text">
+                  <string>Братья Стругацкие</string>
+                 </property>
+                </item>
+                <item row="1" column="3">
+                 <property name="text">
+                  <string>1998 год</string>
+                 </property>
+                </item>
+                <item row="1" column="4">
+                 <property name="text">
+                  <string>12.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="2" column="0">
+                 <property name="text">
+                  <string>Морфий</string>
+                 </property>
+                </item>
+                <item row="2" column="1">
+                 <property name="text">
+                  <string>Булгаков М.А. написал Морфий</string>
+                 </property>
+                </item>
+                <item row="2" column="2">
+                 <property name="text">
+                  <string>Булгаков М.А.</string>
+                 </property>
+                </item>
+                <item row="2" column="3">
+                 <property name="text">
+                  <string>1997 год</string>
+                 </property>
+                </item>
+                <item row="2" column="4">
+                 <property name="text">
+                  <string>12.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="3" column="0">
+                 <property name="text">
+                  <string>Бесы</string>
+                 </property>
+                </item>
+                <item row="3" column="1">
+                 <property name="text">
+                  <string>Достоевский Ф.М. написал Бесы</string>
+                 </property>
+                </item>
+                <item row="3" column="2">
+                 <property name="text">
+                  <string>Достоевский Ф.М.</string>
+                 </property>
+                </item>
+                <item row="3" column="3">
+                 <property name="text">
+                  <string>1996 год</string>
+                 </property>
+                </item>
+                <item row="3" column="4">
+                 <property name="text">
+                  <string>13.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="4" column="0">
+                 <property name="text">
+                  <string>Процесс</string>
+                 </property>
+                </item>
+                <item row="4" column="1">
+                 <property name="text">
+                  <string>Франц Кафка написал Процесс</string>
+                 </property>
+                </item>
+                <item row="4" column="2">
+                 <property name="text">
+                  <string>Франц Кафка</string>
+                 </property>
+                </item>
+                <item row="4" column="3">
+                 <property name="text">
+                  <string>1995 год</string>
+                 </property>
+                </item>
+                <item row="4" column="4">
+                 <property name="text">
+                  <string>13.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="5" column="0">
+                 <property name="text">
+                  <string>Замок</string>
+                 </property>
+                </item>
+                <item row="5" column="1">
+                 <property name="text">
+                  <string>Франц Кафака написал Замок</string>
+                 </property>
+                </item>
+                <item row="5" column="2">
+                 <property name="text">
+                  <string>Франц Кафка</string>
+                 </property>
+                </item>
+                <item row="5" column="3">
+                 <property name="text">
+                  <string>1994 год</string>
+                 </property>
+                </item>
+                <item row="5" column="4">
+                 <property name="text">
+                  <string>13.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="6" column="0">
+                 <property name="text">
+                  <string>Трудно быть богов</string>
+                 </property>
+                </item>
+                <item row="6" column="1">
+                 <property name="text">
+                  <string>Братья Стругацкие написали Трудно быть богом</string>
+                 </property>
+                </item>
+                <item row="6" column="2">
+                 <property name="text">
+                  <string>Братья Стругацкие</string>
+                 </property>
+                </item>
+                <item row="6" column="3">
+                 <property name="text">
+                  <string>1993 год</string>
+                 </property>
+                </item>
+                <item row="6" column="4">
+                 <property name="text">
+                  <string>14.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="7" column="0">
+                 <property name="text">
+                  <string>Реквием</string>
+                 </property>
+                </item>
+                <item row="7" column="1">
+                 <property name="text">
+                  <string>Цветаева М.И. написала Реквием</string>
+                 </property>
+                </item>
+                <item row="7" column="2">
+                 <property name="text">
+                  <string>Цветаева М.И.</string>
+                 </property>
+                </item>
+                <item row="7" column="3">
+                 <property name="text">
+                  <string>1992 год</string>
+                 </property>
+                </item>
+                <item row="7" column="4">
+                 <property name="text">
+                  <string>14.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="8" column="0">
+                 <property name="text">
+                  <string>Думают ли андроиды об электроовцаx?</string>
+                 </property>
+                </item>
+                <item row="8" column="1">
+                 <property name="text">
+                  <string>Филипп Дик написал Думают ли андроиды об электроофцах?</string>
+                 </property>
+                </item>
+                <item row="8" column="2">
+                 <property name="text">
+                  <string>Филипп Дик</string>
+                 </property>
+                </item>
+                <item row="8" column="3">
+                 <property name="text">
+                  <string>1991 год</string>
+                 </property>
+                </item>
+                <item row="8" column="4">
+                 <property name="text">
+                  <string>14.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="9" column="0">
+                 <property name="text">
+                  <string>Цветы для Элджернона</string>
+                 </property>
+                </item>
+                <item row="9" column="1">
+                 <property name="text">
+                  <string>Дэниел Киз написал Цветы для Элджернона</string>
+                 </property>
+                </item>
+                <item row="9" column="2">
+                 <property name="text">
+                  <string>Дэниел Киз</string>
+                 </property>
+                </item>
+                <item row="9" column="3">
+                 <property name="text">
+                  <string>1990 год</string>
+                 </property>
+                </item>
+                <item row="9" column="4">
+                 <property name="text">
+                  <string>15.04.2023</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
                </widget>
               </item>
               <item>
@@ -589,7 +1088,13 @@ background-color: rgba(85, 170, 127, 105);
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_2"/>
+          <widget class="QWidget" name="page_2">
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_7"/>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </item>
        </layout>
